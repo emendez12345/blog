@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title',255);
             $table->string('slug',255)->unique();
             $table->string('introduction',255);
+            $table->string('image',255);
             $table->text('body');
             $table->boolean('status')->default(0);
 

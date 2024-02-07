@@ -15,7 +15,7 @@ class Article extends Model
         'updated_at'
     ];
 
-    //Relation of one or one invers(profile-user)
+    //Relation of one or muchs invers(profile-user)
     public function User(){
         return $this->belongsTo(User::class);
     } 

@@ -17,18 +17,18 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->tinyInteger('value');
             $table->string('description', 255);
-            //Relation with user
+            //Relacion con usuario
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-            //Relation with article
+            //Relacion con articulos
             $table->unsignedBigInteger('article_id');
             $table->foreign('article_id')
                 ->references('id')
                 ->on('articles')
-                ->onDelete('cascade');
+                ->onDelete('cascade');    
             $table->timestamps();
         });
     }
